@@ -40,8 +40,13 @@ func WithBaseURL(baseURL string) Option {
 		c.baseURL = baseURL
 	}
 }
+
 func (c *Client) Process(ctx context.Context, req *ProcessRequest) (*ProcessResponse, error) {
 	url := c.baseURL + "/api/v1/auth/process"
+
+	if len(req.Data) > 10 {
+		return nil, fmt.Errorf("req data is too long")
+	}
 
 	body, err := json.Marshal(req)
 	if err != nil {
