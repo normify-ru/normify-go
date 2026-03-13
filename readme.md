@@ -1,9 +1,5 @@
 # Normify Go SDK
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/normify-ru/normify-go.svg)](https://pkg.go.dev/github.com/normify-ru/normify-go)
-[![Go Version](https://img.shields.io/github/go-mod/go-version/normify-ru/normify-go)](https://github.com/normify-ru/normify-go)
-[![License](https://img.shields.io/github/license/normify-ru/normify-go)](LICENSE)
-
 Go клиент для [Normify API](https://normify.ru) — сервиса нормализации и обработки данных.
 
 На данный момент реализован **синхронный метод** `/api/v1/auth/process` для мгновенной нормализации небольших объёмов данных (до 10 записей). Асинхронные методы будут добавлены позже.
